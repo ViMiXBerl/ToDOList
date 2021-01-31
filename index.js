@@ -1,55 +1,46 @@
 const submitBtn = document.querySelector("#submitBtn");
 
-let tasks = {};
-let toDo = [];
-let taskInProgress = [];
-let taskDone = [];
-let taskDeleted = [];
-
-const addTaskToToDo = () => {
-  submitBtn.addEventListener("click", () => {
-    const headingTask = document.querySelector("#heading__task");
-    const descriptionTask = document.querySelector("#description__task");
-
-    toDo.push({
-      headingTask: headingTask.value,
-      descriptionTask: descriptionTask.value,
-    });
-    tasks.toDo = toDo;
-
-    // console.log(tasks);
-    // console.log(toDo);
-    addTasks();
-    checked();
-  });
+let tasks = {
+  toDo: [],
+  taskInProgress: [],
+  taskDone: [],
+  taskDeleted: [],
 };
-addTaskToToDo();
+
+submitBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const headingTask = document.querySelector("#heading__task");
+  const descriptionTask = document.querySelector("#description__task");
+
+  tasks.toDo.push({
+    headingTask: headingTask.value,
+    descriptionTask: descriptionTask.value,
+  });
+
+  // console.log(tasks);
+  // console.log(toDo);
+  addTasks();
+  // checked();
+});
+
 const addTasks = () => {
   const formToDo = document.querySelector("#formToDo");
 
-  toDo.forEach((item) => {
+  formToDo.innerHTML = "";
+
+  tasks.toDo.forEach((item) => {
     formToDo.innerHTML += `
+    <div>
+    <div class="heading__task"> ${item.headingTask}</div>
+    <div class="description__task"> ${item.descriptionTask}</div>
     
-    <input
-      type="text"
-      readonly
-      autocomplete="on"
-      class="heading__task"
-      placeholder = "${item.headingTask}"
-    />
-    <input
-      type="text"
-      readonly
-      autocomplete="on"
-      class="description__task"
-      placeholder = "${item.descriptionTask}"
-    />
     <div class= "btn">
     <button class="btn__pancil"></button>
     <button class="btn__clear"></button>
     <button id="btn__checked"></button>
     </div>
-    
+    </div>
   `;
   });
 };
@@ -60,8 +51,8 @@ const checked = () => {
   inProgressChecked.addEventListener("click", (event) => {
     event.preventDefault();
 
-    taskInProgress = toDo.splice(0, 1);
-    tasks.taskInProgress = taskInProgress;
+    taskInProgress = tasks.toDo.splice(0, 1);
+    // tasks.taskInProgress = taskInProgress;
 
     addTaskInProgress();
     deleteTaskFromToDo();
@@ -71,7 +62,7 @@ const checked = () => {
 const addTaskInProgress = () => {
   const formInProgress = document.querySelector("#formInProgress");
 
-  taskInProgress.forEach((item) => {
+  tasks.taskInProgress.forEach((item) => {
     formInProgress.innerHTML += `<input
     type="text"
     readonly
