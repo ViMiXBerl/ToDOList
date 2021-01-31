@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="formToDo">
+      <h1>To do</h1>
+      <input
+        type="text"
+        placeholder="Введите заголовок для этой задачи"
+        autocomplete="on"
+        id="heading__task"
+      />
+      <input
+        type="text"
+        placeholder="Введите задачу"
+        autocomplete="on"
+        id="description__task"
+      />
+      <button id="submitBtn">Добавить задачу</button>
+    </form>
+    <form id="formInProgress">
+      <h1>In progress</h1>
+    </form>
+    <form id="formDone">
+      <h1>Done</h1>
+    </form>
+    <form id="formDeleted">
+      <h1>Deleted</h1>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
