@@ -25,12 +25,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   top: 100px;
   left: 50px;
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -40,7 +40,7 @@ body {
   color: #0c380c;
 }
 
-.formToDo {
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +60,6 @@ body {
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -85,12 +84,40 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  top: 190px;
+  left: 500px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  background-color: rgba(174, 194, 175, 0.589);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: #bac700;
+}
+
+.formInProgress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
   top: 100px;
   left: 500px;
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -120,7 +147,6 @@ body {
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -150,7 +176,6 @@ body {
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -195,7 +220,7 @@ button {
           justify-content: space-between;
 }
 
-.btn__pancil {
+#btn__pancil {
   background-color: transparent;
   width: 22px;
   height: 22px;
@@ -205,7 +230,7 @@ button {
   border: none;
 }
 
-.btn__clear {
+#btn__clear {
   background-color: transparent;
   width: 22px;
   height: 22px;
@@ -225,13 +250,13 @@ button {
   border: none;
 }
 
-.heading__task {
+.card__headingTask {
   background-color: white;
   font-family: "Yusei Magic", sans-serif;
   color: #0c380c;
 }
 
-.description__task {
+.card__descriptionTask {
   background-color: white;
   font-family: "Yusei Magic", sans-serif;
   color: #0c380c;

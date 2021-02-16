@@ -1,4 +1,10 @@
 const submitBtn = document.querySelector("#submitBtn");
+const form = document.querySelector(".form");
+const formToDo = document.querySelector("#formToDo");
+const formInProgress = document.querySelector("#formInProgress");
+
+const headingTask = document.querySelector("#heading__task");
+const descriptionTask = document.querySelector("#description__task");
 
 let tasks = {
   toDo: [],
@@ -10,98 +16,85 @@ let tasks = {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const headingTask = document.querySelector("#heading__task");
-  const descriptionTask = document.querySelector("#description__task");
-
   tasks.toDo.push({
     headingTask: headingTask.value,
     descriptionTask: descriptionTask.value,
   });
 
   // console.log(tasks);
-  // console.log(toDo);
+  // console.log(tasks.toDo);
+  // console.log(tasks.taskInProgress);
+
+  form.reset();
   addTasks();
-  // checked();
 });
 
 const addTasks = () => {
-  const formToDo = document.querySelector("#formToDo");
-
   formToDo.innerHTML = "";
 
   tasks.toDo.forEach((item) => {
     formToDo.innerHTML += `
-    <div>
-    <div class="heading__task"> ${item.headingTask}</div>
-    <div class="description__task"> ${item.descriptionTask}</div>
+    <div class="card" >
+    <p class="card__headingTask">${item.headingTask}</p>
+    <p class="card__descriptionTask">${item.descriptionTask}</p>
     
-    <div class= "btn">
-    <button class="btn__pancil"></button>
-    <button class="btn__clear"></button>
+    <button id="btn__pancil"></button>
+    <button id="btn__clear"></button>
     <button id="btn__checked"></button>
+   
     </div>
-    </div>
+    
   `;
   });
-};
+  formInProgress.innerHTML = "";
+  tasks.taskInProgress.forEach((item, index) => {
+    formInProgress.innerHTML += `
+      <div class="card" >
+      <p class="card__headingTask">${item[index].headingTask}</p>
+      <p class="card__descriptionTask">${item[index].descriptionTask}</p>
 
-const checked = () => {
-  const inProgressChecked = document.querySelector("#btn__checked");
+      <button id="btn__clear"></button>
+      <button id="btn__checked"></button>
 
-  inProgressChecked.addEventListener("click", (event) => {
-    event.preventDefault();
+      </div>
 
-    taskInProgress = tasks.toDo.splice(0, 1);
-    // tasks.taskInProgress = taskInProgress;
-
-    addTaskInProgress();
-    deleteTaskFromToDo();
+    `;
+    console.log(item[index]);
   });
 };
 
-const addTaskInProgress = () => {
-  const formInProgress = document.querySelector("#formInProgress");
+const checked = (event) => {
+  const card = event.target.closest(".card");
+  const heading = card.querySelector(".card__headingTask").textContent;
+  const description = card.querySelector(".card__descriptionTask").textContent;
 
-  tasks.taskInProgress.forEach((item) => {
-    formInProgress.innerHTML += `<input
-    type="text"
-    readonly
-    autocomplete="on"
-    class="heading__task"
-    placeholder = "${item.headingTask}"
-  />
-  <input
-    type="text"
-    readonly
-    autocomplete="on"
-    class="description__task"
-    placeholder = "${item.descriptionTask}"
-  />
-  <div class= "btn">
-  <button class="btn__clear"></button>
-  <button id="btn__checked"></button>
-  </div>`;
-    console.log(taskInProgress);
-    console.log(toDo);
-    console.log(tasks);
-    // console.log(toDo);
-  });
+  const index = tasks.toDo.findIndex(
+    (item) =>
+      item.headingTask === heading && item.descriptionTask === description
+  );
+
+  tasks.taskInProgress.push(tasks.toDo.splice(index, 1));
+
+  addTasks();
 };
 
-const deleteTaskFromToDo = () => {
-  formToDo.innerHTML = `<form id="formToDo">
-  <h1>To do</h1>
-  <input
-    type="text"
-    placeholder="Введите заголовок для этой задачи"
-    autocomplete="on"
-    id="heading__task"
-  />
-  <input
-    type="text"
-    placeholder="Введите задачу"
-    autocomplete="on"
-    id="description__task"
-  />
-  <button id="submitBtn">Добавить задачу</button>`;
+const clear = (event) => {
+  const card = event.target.closest(".card");
+  const heading = card.querySelector(".card__headingTask").textContent;
+  const description = card.querySelector(".card__descriptionTask").textContent;
+
+  const index = tasks.toDo.findIndex(
+    (item) =>
+      item.headingTask === heading && item.descriptionTask === description
+  );
+
+  tasks.taskDeleted.push(tasks.toDo.splice(index, 1));
+
+  addTasks();
 };
+formToDo.addEventListener("click", (event) => {
+  if (event.target.closest("#btn__checked")) checked(event);
+
+  if (event.target.closest("#btn__clear")) clear(event);
+  // if (event.target.closest("#btn__pancil")) pancil(event);
+});

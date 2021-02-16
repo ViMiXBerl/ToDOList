@@ -12,32 +12,37 @@
     <title>Document</title>
   </head>
   <body>
-    <form class="formToDo">
-      <h1>To do</h1>
-      <input
-        type="text"
-        placeholder="Введите заголовок для этой задачи"
-        autocomplete="on"
-        id="heading__task"
-      />
-      <input
-        type="text"
-        placeholder="Введите задачу"
-        autocomplete="on"
-        id="description__task"
-      />
-      <button id="submitBtn">Добавить задачу</button>
+    <main>
+      <form class="form">
+        <h1>To do</h1>
+        <input
+          type="text"
+          placeholder="Введите заголовок для этой задачи"
+          autocomplete="on"
+          id="heading__task"
+        />
+        <input
+          type="text"
+          placeholder="Введите задачу"
+          autocomplete="on"
+          id="description__task"
+        />
+        <button id="submitBtn">Добавить задачу</button>
+      </form>
       <div id="formToDo"></div>
-    </form>
-    <form id="formInProgress">
-      <h1>In progress</h1>
-    </form>
-    <form id="formDone">
-      <h1>Done</h1>
-    </form>
-    <form id="formDeleted">
-      <h1>Deleted</h1>
-    </form>
+
+      <div class="formInProgress">
+        <h1>In progress</h1>
+      </div>
+      <div id="formInProgress"></div>
+
+      <div>
+        <h1 id="formDone">Done</h1>
+      </div>
+      <div>
+        <h1 id="formDeleted">Deleted</h1>
+      </div>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
