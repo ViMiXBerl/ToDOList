@@ -29,22 +29,40 @@
         />
         <button id="submitBtn">Добавить задачу</button>
       </form>
+
       <div id="formToDo"></div>
+      <div id="formInProgress"></div>
+      <div id="formDone"></div>
+      <div id="formDeleted"></div>
 
       <div class="formInProgress">
         <h1>In progress</h1>
       </div>
-      <div id="formInProgress"></div>
 
       <div class="formDone">
         <h1>Done</h1>
       </div>
-      <div id="formDone"></div>
 
       <div class="formDeleted">
         <h1>Deleted</h1>
       </div>
-      <div id="formDeleted"></div>
+
+      <div class="modal__card-editor">
+        <div class="modal__card_editor_content">
+          <button class="modal__card_editor_closeBtn"></button>
+          <textarea
+            name="modal-textarea-heading-task"
+            id="heading__task_modal"
+            required
+          ></textarea>
+          <textarea
+            name="modal-textarea-description-task"
+            id="description__task_modal"
+            required
+          ></textarea>
+          <button id="modal__card_editor_saveBtn">Save</button>
+        </div>
+      </div>
     </main>
     <script src="index.js"></script>
   </body>

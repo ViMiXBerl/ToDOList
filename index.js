@@ -36,8 +36,8 @@ const addTasks = () => {
   tasks.toDo.forEach((item) => {
     formToDo.innerHTML += `
     <div class="card" >
-    <p class="card__headingTask">${item.headingTask}</p>
-    <p class="card__descriptionTask">${item.descriptionTask}</p>
+    <div class="card__headingTask">${item.headingTask}</div>
+    <div class="card__descriptionTask">${item.descriptionTask}</div>
     
     <button id="btn__pancil"></button>
     <button id="btn__clear"></button>
@@ -159,8 +159,7 @@ formToDo.addEventListener("click", (event) => {
   if (event.target.closest("#btn__checked")) checked(event);
   if (event.target.closest("#btn__clear")) clear(event);
   if (event.target.closest("#btn__checked_done")) done(event);
-
-  // if (event.target.closest("#btn__pancil")) pancil(event);
+  if (event.target.closest("#btn__pancil")) pancil(event);
 });
 
 formInProgress.addEventListener("click", (event) => {
@@ -169,3 +168,69 @@ formInProgress.addEventListener("click", (event) => {
 
   // if (event.target.closest("#btn__pancil")) pancil(event);
 });
+
+const modalCardEditorSaveBtnClick = document.querySelector(
+  "#modal__card_editor_saveBtn"
+);
+
+const pancil = (event) => {
+  const card = event.target.closest(".card");
+  const heading = card.querySelector(".card__headingTask").textContent;
+  const description = card.querySelector(".card__descriptionTask").textContent;
+
+  const index = tasks.toDo.findIndex(
+    (item) =>
+      item.headingTask === heading && item.descriptionTask === description
+  );
+  const headingTaskModal = document.querySelector("#heading__task_modal");
+  const descriptionTaskModal = document.querySelector(
+    "#description__task_modal"
+  );
+  headingTaskModal.value = heading;
+  descriptionTaskModal.value = description;
+
+  openModal();
+
+  modalCardEditorSaveBtnClick.addEventListener("click", (event) => {
+    modalCardEditorSaveBtn(event, index);
+  });
+};
+
+const modalCardEditor = document.querySelector(".modal__card-editor");
+const modalCardEditorContent = document.querySelector(
+  ".modal__card_editor_content"
+);
+
+modalCardEditor.addEventListener("click", (event) => {
+  if (!event.target.closest(".modal__card_editor_content")) closeModal();
+});
+
+const openModal = () => {
+  modalCardEditor.style.display = "block";
+};
+
+const closeModal = () => {
+  modalCardEditor.style.display = "none";
+};
+
+const modalCardEditorCloseBtn = document.querySelector(
+  ".modal__card_editor_closeBtn"
+);
+modalCardEditorCloseBtn.addEventListener("click", () => {
+  closeModal();
+});
+
+const modalCardEditorSaveBtn = (event, index) => {
+  event.preventDefault();
+  const headingTaskModalNew = document.querySelector("#heading__task_modal")
+    .value;
+  const descriptionTaskModalNew = document.querySelector(
+    "#description__task_modal"
+  ).value;
+  tasks.toDo.splice(index, 1, {
+    headingTask: headingTaskModalNew,
+    descriptionTask: descriptionTaskModalNew,
+  });
+  closeModal();
+  addTasks();
+};
