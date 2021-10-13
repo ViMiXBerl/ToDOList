@@ -25,13 +25,43 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  top: 315px;
+  left: 50px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: rgba(174, 194, 175, 0.589);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: #0c380c;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   top: 100px;
   left: 50px;
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
+  border-radius: 3px;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -56,12 +86,42 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  top: 190px;
+  left: 500px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: rgba(174, 194, 175, 0.589);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: #bac700;
+}
+
+.formInProgress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
   top: 100px;
   left: 500px;
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
+  border-radius: 3px;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -86,12 +146,42 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  top: 190px;
+  left: 950px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: rgba(174, 194, 175, 0.589);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: #00c400;
+}
+
+.formDone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
   top: 100px;
   left: 950px;
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
+  border-radius: 3px;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -116,12 +206,42 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  top: 190px;
+  left: 1400px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: rgba(174, 194, 175, 0.589);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: #9c0000;
+}
+
+.formDeleted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
   top: 100px;
   left: 1400px;
   margin: 0;
   width: 400px;
   border: 2px solid rgba(255, 255, 255, 0.726);
-  border-radius: 5%;
+  border-radius: 3px;
   background-color: rgba(174, 194, 175, 0.589);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -133,7 +253,7 @@ body {
 
 input {
   height: 20%;
-  width: 60%;
+  width: 70%;
   margin: 0.3rem;
   outline: none;
   border: none;
@@ -166,7 +286,7 @@ button {
           justify-content: space-between;
 }
 
-.btn__pancil {
+#btn__pancil {
   background-color: transparent;
   width: 22px;
   height: 22px;
@@ -176,7 +296,17 @@ button {
   border: none;
 }
 
-.btn__clear {
+#btn__clear {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/clear.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+
+#btn__clear_deleted {
   background-color: transparent;
   width: 22px;
   height: 22px;
@@ -196,15 +326,89 @@ button {
   border: none;
 }
 
-.heading__task {
-  background-color: white;
-  font-family: "Yusei Magic", sans-serif;
-  color: #0c380c;
+#btn__checked_done {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/checked.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
 }
 
-.description__task {
+.card {
+  width: 50%;
+}
+
+.card__headingTask {
   background-color: white;
   font-family: "Yusei Magic", sans-serif;
   color: #0c380c;
+  overflow-wrap: break-word;
+}
+
+.card__descriptionTask {
+  margin-top: 1rem;
+  background-color: white;
+  font-family: "Yusei Magic", sans-serif;
+  color: #0c380c;
+  overflow-wrap: break-word;
+}
+
+.modal__card-editor {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.modal__card_editor_closeBtn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 85%;
+  background-image: url(./images/close-cross-symbol-in-a-circle.svg);
+  background-size: cover;
+}
+
+.modal__card_editor_content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 100px;
+  left: 50px;
+  margin: 0;
+  width: 400px;
+  background-color: gray;
+}
+
+textarea {
+  height: 30%;
+  width: 280px;
+  margin: 1.1rem;
+  resize: vertical;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: white;
+  border-radius: 2%;
+  font-family: "Yusei Magic", sans-serif;
+  color: #0c380c;
+  -webkit-box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+}
+
+#modal__card_editor_saveBtn {
+  width: 70px;
 }
 /*# sourceMappingURL=style.css.map */

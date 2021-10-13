@@ -12,31 +12,58 @@
     <title>Document</title>
   </head>
   <body>
-    <form id="formToDo">
-      <h1>To do</h1>
-      <input
-        type="text"
-        placeholder="Введите заголовок для этой задачи"
-        autocomplete="on"
-        id="heading__task"
-      />
-      <input
-        type="text"
-        placeholder="Введите задачу"
-        autocomplete="on"
-        id="description__task"
-      />
-      <button id="submitBtn">Добавить задачу</button>
-    </form>
-    <form id="formInProgress">
-      <h1>In progress</h1>
-    </form>
-    <form id="formDone">
-      <h1>Done</h1>
-    </form>
-    <form id="formDeleted">
-      <h1>Deleted</h1>
-    </form>
+    <main>
+      <form class="form">
+        <h1>To do</h1>
+        <input
+          type="text"
+          placeholder="Введите заголовок для этой задачи"
+          autocomplete="on"
+          id="heading__task"
+        />
+        <input
+          type="text"
+          placeholder="Введите задачу"
+          autocomplete="on"
+          id="description__task"
+        />
+        <button id="submitBtn">Добавить задачу</button>
+      </form>
+
+      <div id="formToDo"></div>
+      <div id="formInProgress"></div>
+      <div id="formDone"></div>
+      <div id="formDeleted"></div>
+
+      <div class="formInProgress">
+        <h1>In progress</h1>
+      </div>
+
+      <div class="formDone">
+        <h1>Done</h1>
+      </div>
+
+      <div class="formDeleted">
+        <h1>Deleted</h1>
+      </div>
+
+      <div class="modal__card-editor">
+        <div class="modal__card_editor_content">
+          <button class="modal__card_editor_closeBtn"></button>
+          <textarea
+            name="modal-textarea-heading-task"
+            id="heading__task_modal"
+            required
+          ></textarea>
+          <textarea
+            name="modal-textarea-description-task"
+            id="description__task_modal"
+            required
+          ></textarea>
+          <button id="modal__card_editor_saveBtn">Save</button>
+        </div>
+      </div>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,304 @@
+// $backgroundcolor: ;
+$backgroundcolorform: rgba(174, 194, 175, 0.589);
+
+* {
+  margin: 0, auto;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-image: url(./images/wallpapers_16569.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#formToDo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 315px;
+  left: 50px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  left: 50px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+}
+#formInProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 190px;
+  left: 500px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(186, 199, 0);
+}
+.formInProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 100px;
+  left: 500px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(186, 199, 0);
+}
+#formDone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 190px;
+  left: 950px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(0, 196, 0);
+}
+.formDone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 100px;
+  left: 950px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(0, 196, 0);
+}
+#formDeleted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 190px;
+  left: 1400px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(156, 0, 0);
+}
+.formDeleted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 100px;
+  left: 1400px;
+  margin: 0;
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 3px;
+  background-color: $backgroundcolorform;
+  backdrop-filter: blur(20px);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(156, 0, 0);
+}
+input {
+  height: 20%;
+  width: 70%;
+  margin: 0.3rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  border-radius: 2%;
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  margin: 1rem;
+  cursor: pointer;
+  border: 3px solid white;
+  border-radius: 8%;
+  background-color: rgba(173, 247, 62, 0.925);
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+  text-align: center;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+#btn__pancil {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/edit-button.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+#btn__clear {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/clear.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+#btn__clear_deleted {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/clear.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+#btn__checked {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/checked.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+#btn__checked_done {
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  background-image: url(./images/checked.svg);
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+.card {
+  width: 50%;
+}
+
+.card__headingTask {
+  background-color: white;
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+  overflow-wrap: break-word;
+}
+
+.card__descriptionTask {
+  margin-top: 1rem;
+  background-color: white;
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+  overflow-wrap: break-word;
+}
+
+.modal__card-editor {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.modal__card_editor_closeBtn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 85%;
+  background-image: url(./images/close-cross-symbol-in-a-circle.svg);
+  background-size: cover;
+}
+.modal__card_editor_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  left: 50px;
+  margin: 0;
+  width: 400px;
+  background-color: gray;
+}
+textarea {
+  height: 30%;
+  width: 280px;
+  margin: 1.1rem;
+  resize: vertical;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: white;
+  border-radius: 2%;
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(12, 56, 12);
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
+}
+
+#modal__card_editor_saveBtn {
+  // position: absolute;
+  width: 70px;
+}
